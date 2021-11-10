@@ -1,0 +1,14 @@
+on death of player:
+	if attacker is a player:
+		if victim's max health <= 1:
+			send "&aYou killed %victim%, gained 0 heart from victim" to attacker
+			send "&cYou got killed by %attacker%, taken 0 heart from you" to victim
+		else:
+			send "&aYou killed %victim%, gained 1 heart from victim" to attacker
+			send "&cYou got killed by %attacker%, taken 1 heart from you" to victim
+
+command /sethealth <player> <integer>:
+	permission: op
+	trigger:
+		set arg-1's max health to arg-2
+		send "Set %arg-1%'s max health to %arg-2%"

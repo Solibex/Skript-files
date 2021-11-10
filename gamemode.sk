@@ -1,0 +1,75 @@
+options:
+	prefix: &e[&c&lGamemode&e]
+	permmsg: &cYou don't has permission to execute this command.
+	gmcperm: skript.gmc
+	gmsperm: skript.gms
+	gmspperm: skript.gmsp
+	gmaperm: skript.gma
+command /gmc [<player>]:
+	permission: {@gmcperm}
+	permission message: {@permmsg}
+	cooldown: 1 minute
+	cooldown message: &cCool-down dud wait %remaining time%
+	trigger:
+		if arg-1 is not set:
+			set player's gamemode to creative
+			send "{@prefix}: You're gamemode is now creative"
+		else:
+			if arg-1 is not player:
+				set arg-1's gamemode to creative
+				send "{@prefix}: You're gamemode is now creative" to arg-1
+				send "{@prefix}: %arg-1% gamemode is now creative"
+			else:
+				set player's gamemode to creative
+				send "{@prefix}: You're gamemode is now creative"
+command /gms [<player>]:
+	permission: {@gmsperm}
+	permission message: {@permmsg}
+	cooldown: 1 minute
+	cooldown message: &cCool-down dud wait %remaining time%
+	trigger:
+		if arg-1 is not set:
+			set player's gamemode to survival
+			send "{@prefix}: You're gamemode is now survival"
+		else:
+			if arg-1 is not player:
+				set arg-1's gamemode to survival
+				send "{@prefix}: You're gamemode is now survival" to arg-1
+				send "{@prefix}: %arg-1% gamemode is now survival"
+			else:
+				set player's gamemode to survival
+				send "{@prefix}: You're gamemode is now survival"
+command /gmsp [<player>]:
+	permission: {gmspperm}
+	permission message: {@permmsg}
+	cooldown: 1 minute
+	cooldown message: &cCool-down dud wait %remaining time%
+	trigger:
+		if arg-1 is not set:
+			set player's gamemode to spectator
+			send "{@prefix}: You're gamemode is now spectator"
+		else:
+			if arg-1 is not player:
+				set arg-1's gamemode to spectator
+				send "{@prefix}: You're gamemode is now spectator"
+				send "{@prefix}: %arg-1% gamemode is now spectator"
+			else:
+				set player's gamemode to spectator
+				send "{@prefix}: You're gamemode is now spectator"
+command /gma [<player>]:
+	permission: {@gmaperm}
+	permission message: {@permmsg}
+	cooldown: 1 minute
+	cooldown message: &cCool-down dud wait %remaining time%
+	trigger:
+		if arg-1 is not set:
+			set player's gamemode to adventure
+			send "{@prefix}: You're gamemode is now adventure"
+		else:
+			if arg-1 is not player:
+				set arg-1's gamemode to adventure
+				send "{@prefix}: You're gamemode is now adventure"
+				send "{@prefix}: %arg-1% gamemode is now adventure"
+			else:
+				set player's gamemode to adventure
+				send "{@prefix}: You're gamemode is now adventure"

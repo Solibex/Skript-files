@@ -1,4 +1,4 @@
-function GiveRandomItem(p: player):
+function randomitem(p: player):
 	set {_i} to random item out of all items
 	if {toggle::%uuid of {_i}%} is true:
 		give {_p} 1 of {_i}
@@ -11,10 +11,12 @@ command /toggle:
 			set {toggle::%player's uuid%} to false
 			send "&cRandom item disabled"
 command /dupe:
+	cooldown: 2 second
+	cooldown message: Wait a bit for /dupe
 	trigger:
 		give player player's held item
 on join:
 	while player is online:
 		if {toggle::%player's uuid%} is true:
-			GiveRandomItem(player)
+			randomitem(player)
 		wait 10 second

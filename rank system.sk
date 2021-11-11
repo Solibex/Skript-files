@@ -22,3 +22,9 @@ function RemoveRankFromPlayer(rankname: text, target: player):
 			return false
 	else:
 		return false
+function SetRankSuffix(rankname: text, suffix: text):
+	if {ranks::*} contains {_rankname}:
+		set {ranks::%{_rankname}%::suffix} to coloured {_suffix}
+		return true
+	else:
+		return false

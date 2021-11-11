@@ -1,5 +1,0 @@
-on load:
-	loop all items:
-		if loop-item is a block:
-			add loop-item to {all::blocks::*}
-	send "&eLoaded %size of {all::blocks::*}% blocks!"

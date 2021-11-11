@@ -1,0 +1,24 @@
+function AddRankToPlayer(rankname: text, target: player):
+	if {ranks::*} contains {_rankname}:
+		if {ranks::%{_rankname}%::members::*} does not contain {_target}:
+			remove {_target} from {ranks::%{_rankname}%::members::*}
+			return true
+		else:
+			return false
+	else:
+		return false
+function SetRankPrefix(rankname: text, prefix: text):
+	if {ranks::*} contains {_rankname}:
+		set {ranks::%{_rankname}%::prefix} to coloured {_prefix}
+		return true
+	else:
+		return false
+function RemoveRankFromPlayer(rankname: text, target: player):
+	if {ranks::*} contains {_rankname}:
+		if {ranks::%{_rankname}%::members::*} contains {_target}:
+			remove {_target} from {ranks::%{_rankname}%::members::*}
+			return true
+		else:
+			return false
+	else:
+		return false

@@ -1,6 +1,4 @@
-# Skript-files
-## This is my files for skript lmao
-## Some skript are bad, you could post it on issue
-## And you need skript for these file to work
-## https://github.com/SkriptLang/Skript
-## Thanks to the creator of skript! :p
+## Skript-files
+### This is the public skript files repo.
+### If you want to add a file, join our discord!
+# https://discord.gg/5G4GAbEexj
